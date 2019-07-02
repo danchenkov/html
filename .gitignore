@@ -27,6 +27,7 @@
 .DS_Store
 /bin
 /css
+/dist
 /js
 .pnp.*
 .yarn/*
