@@ -13,9 +13,9 @@
 
 	<link href="/css/normalize.css" rel="stylesheet">
 	<link href="/css/boilerplate.css" rel="stylesheet">
+	<link href="/css/basic.css" rel="stylesheet">
 	<link href="/css/main.css" rel="stylesheet">
 
-	<link href="https://vjs.zencdn.net/7.5.4/video-js.min.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i|Muli:300,300i,400,400i,600,600i,700,700i&display=swap&subset=cyrillic" rel="stylesheet">
 
 	<meta name="theme-color" content="#fafafa">
@@ -30,47 +30,46 @@
 	<!-- <p>Hello world! This is HTML5 Boilerplate.</p> -->
 
 	<main id="main">
-		<section id="form">
+		<section id="form" class="jumbotron">
 			<h1>Sample Form</h1>
-			<form accept-charset="UTF-8" action="/" data-remote="true" method="post">
-				<input name="authenticity_token" type="hidden" value="J7CBxfHalt49OSHp27hblqK20c9PgwJ108nDHX/8Cts=" />
+			<form accept-charset="UTF-8" action="http://localhost:5004/handle" data-remote="true" method="post">
 				<p>
 					<label>Title</label><br>
-					<label><input type="radio" name="title" value="mr">Mr</label>
-					<label><input type="radio" name="title" value="mrs">Mrs</label>
-					<label><input type="radio" name="title" value="miss">Miss</label>
+					<input type="radio" name="title" value="mr">Mr
+					<input type="radio" name="title" value="mrs">Mrs
+					<input type="radio" name="title" value="miss">Miss
 				</p>
 				<p>
-					<label>First name</label><br>
+					<label for="first_name">First name</label><br>
 					<input type="text" name="first_name">
 				</p>
 				<p>
-					<label>Last name</label><br>
+					<label for="last_name">Last name</label><br>
 					<input type="text" name="last_name">
 				</p>
 				<p>
-					<label>Email</label><br>
+					<label for="email">Email</label><br>
 					<input type="email" name="email" required>
 				</p>
 				<p>
-					<label>Phone number</label><br>
+					<label for="phone">Phone number</label><br>
 					<input type="tel" name="phone">
 				</p>
 				<p>
-					<label>Password</label><br>
+					<label for="password">Password</label><br>
 					<input type="password" name="password">
 				</p>
 				<p>
-					<label>Country</label><br>
-					<select>
+					<label for="country">Country</label><br>
+					<select name="country">
 						<option value="">--Please choose an option--</option>
-					    <option value="RU">Russia</option>
+						<option value="RU">Russia</option>
 						<option value="US">United States</option>
 					</select>
 				</p>
 				<p>
 					<label>
-						<input type="checkbox" value="terms">
+						<input type="checkbox" name="terms" value="agree">
 						I agree to the <a href="/terms">terms and conditions</a>
 					</label>
 				</p>
@@ -79,6 +78,9 @@
 					<button type="reset">Reset form</button>
 				</p>
 			</form>
+
+			<hr />
+			<p>Take me <a href="/">home</a></p>
 		</section>
 	</main>
 
@@ -87,7 +89,8 @@
 	<!-- <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script> -->
 	<!-- <script src="/dist/plugins.js"></script> -->
 	<!-- <script src="/dist/vendor.js"></script> -->
-	<script src="/dist/index.js"></script>
+	<script src="/dist/main.js"></script>
+	<script src="/dist/vue.js"></script>
 
 	<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
 	<script>

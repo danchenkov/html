@@ -1,0 +1,140 @@
+.iframe16x9-wrapper {
+	position: relative;
+	height: 0;
+	padding-bottom: 56.25%;
+	margin-bottom: 1rem;
+}
+
+.iframe16x9-wrapper>video {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+}
+
+#video-player-main {
+	width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.video-js button.vjs-big-play-button {
+	left: 50%;
+	top: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	display: block !important;
+}
+
+.video-js.vjs-playing .vjs-big-play-button {
+	opacity: 0;
+	transition: opacity 0.333333s ease !important;
+}
+
+.video-js:not(.vjs-playing) .vjs-big-play-button {
+	opacity: 1;
+	transition: opacity 0.333333s ease !important;
+}
+
+h1 {
+	font-family: Muli;
+}
+h1+p {
+	margin-top: -0.5rem;
+}
+p {
+	margin-top: 0;
+}
+.deck {
+	font-family: 'Source Sans Pro';
+	font-size: 1rem;
+	font-style: italic;
+}
+.deck::first-line {
+	font-weight: bold;
+}
+
+#main section {
+	width: 100%;
+	max-width: 768px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#main #font-check {
+	font-size: 16px;
+}
+
+#main .jumbotron {
+	font-family: 'Muli', sans-serif;
+}
+
+.grid {
+	margin: auto;
+	max-width: 800px;
+	display: grid;
+
+	grid-template-columns: 4.137362637362637fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	grid-gap: 20px;
+}
+
+figure {
+	margin: 0;
+}
+
+figure img {
+	width: 100%;
+	margin: 0;
+}
+
+.item1 {
+	outline: 1px dotted red;
+	grid-column: 1 / 2;
+	grid-row: 1 / 3;
+}
+
+.item2 {
+	outline: 1px dotted green;
+	grid-column: 2 / 3;
+	grid-row: 1 / 2;
+}
+
+.item3 {
+	outline: 1px dotted blue;
+	grid-column: 2 / 3;
+	grid-row: 2 / 3;
+}
+
+.item4 {
+	background-color: hsla(0, 80%, 40%, 0.8);
+	background-image: linear-gradient(to right, hsla(0, 80%, 45%, 0.95), hsla(210, 90%, 50%, 0.95));
+	grid-column: 1 / 3;
+	grid-row: 3 / 4;
+}
+
+#strip {
+	margin-bottom: 1em;
+}
+
+#lists {
+	display: none;
+}
+
+
+// x(w) func
+//   	x = (wz - gz - g) / (g + 2yw- 2yg)
+//   	where x - ratio between widths of block 1 and 2
+//   	w - container width
+//   	z - aspect ratio of block 1
+//   	y - aspect ratio of blocks 2 and 3 (considered equal)
+//   	g - gap
+
+//   	Basic calculations:
+//   	w = a + b;
+//   	b = ax;
+//   	az = 2yb + g;
+

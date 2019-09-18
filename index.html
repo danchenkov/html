@@ -10,7 +10,26 @@
     <link rel="manifest" href="/site.webmanifest">
     <link rel="apple-touch-icon" href="/icon.png">
 
+<<<<<<< HEAD
+<<<<<<< HEAD
     <meta name="theme-color" content="#fafafa">
+=======
+	<link href="/css/normalize.css" rel="stylesheet">
+	<link href="/css/boilerplate.css" rel="stylesheet">
+	<link href="/css/basic.css" rel="stylesheet">
+	<link href="/css/main.css" rel="stylesheet">
+=======
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+	<link href="/assets/boilerplate.css" rel="stylesheet">
+	<link href="/assets/basic.css" rel="stylesheet">
+	<link href="/assets/main.css" rel="stylesheet">
+>>>>>>> fbe8e6b (no modular css)
+
+	<link href="https://vjs.zencdn.net/7.5.4/video-js.min.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i|Muli:300,300i,400,400i,600,600i,700,700i&display=swap&subset=cyrillic" rel="stylesheet">
+
+	<meta name="theme-color" content="#fafafa">
+>>>>>>> 9f46994 (complexify)
 </head>
 
 <body>
@@ -33,12 +52,154 @@
   <script src='https://vjs.zencdn.net/7.5.4/video.min.js'></script>
   <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 
+<<<<<<< HEAD
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
   <script>
     window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
     ga('create', 'UA-XXXXX-Y', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')
   </script>
   <script src="https://www.google-analytics.com/analytics.js" async></script>
+=======
+	<main id="main">
+		<section id="text">
+			<h1>Hello world! This is HTML5 Boilerplate.</h1>
+			<p class="deck">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</section>
+
+
+		<section id="images">
+			<div class="grid">
+				<figure class="item1"><img src="http://placehold.it/400x400" /></figure>
+				<figure class="item2"><img src="http://placehold.it/100x200" /></figure>
+				<figure class="item3"><img src="http://placehold.it/100x200" /></figure>
+				<figure class="item4"><img src="https://imagenotfound.com/broken.jpeg" /></figure>
+			</div>
+
+			<p style="display: inline">This image here aligns with the text <figure class="item5" style="display: inline"><img src="http://placehold.it/240x120" style="width: inherit;" /></figure>. Well, in theory.</p>
+		</section>
+
+
+		<section id="font-check" class="jumbotron with-toggle-button">
+			<p>Но расцвет типографики как отдельной сферы деятельности начался в Европе, где она появилась в середине XV века. Её распространению способствовали лёгкость и относительно малое количество символов в латинском шрифте, в отличие от китайских иероглифов. Первым, кто серьёзно занялся европейским типографическим искусством, стал Иоганн Гутенберг (1397—1468 гг.), немецкий изобретатель и ювелир. Создав в 1440 году из свинцовых букв наборную форму, он подарил миру первый печатный станок. Отныне создавать книги стало гораздо проще, их стоимость уменьшилась, а количество — возросло.</p>
+			<p>Кстати, да</p>
+		</section>
+
+
+		<section id="address" class="jumbotron toggleable" style="display: none">
+			<address class="container">
+				<strong>Юридический адрес:</strong> 123557, г.&#160;Москва, ул.&#160;Малая Грузинская, д.&#160;52/34, стр.&#160;1, офис&#160;212-1<br>
+				<strong>Телефон:</strong> +7&#160;(495)&#160;661-71-04<br>
+				<strong>Электронная почта:</strong> <a href="mailto:info@new-era.ru">info@new-era.ru</a><br>
+				<strong>Почтовый адрес:</strong> 101000, г.&#160;Москва, а/я&#160;947
+			</address>
+		</section>
+
+
+		<section id="links" class="jumbotron">
+			<table>
+				<thead>
+					<th width="50%">Copy</th>
+					<th width="50%">Frame</th>
+				</thead>
+				<tbody>
+					<td>
+						<p>Internal link to <a href="sample-form.html">Sample Form</a></p>
+						<p>Internal link to <a href="video.html">Sample Video</a></p>
+						<p>Internal link to <a href="strip.html">Strip</a></p>
+						<p>Internal link to a <a href="404.html" target="frame">404 page</a></p>
+						<p>Link to external wiki of <a href="https://en.wikipedia.org/wiki/Mount_Ararat" target="_blank">Mount Ararat</a></p>
+					</td>
+					<td>
+						<iframe src="" name="frame"></iframe>
+					</td>
+				</tbody>
+			</table>
+		</section>
+
+
+		<section id="lists" class="jumbotron">
+			<ul>
+				<li>Item 1</li>
+				<li>Item 2</li>
+				<li>Item 3</li>
+			</ul>
+
+			<ol>
+				<li>Item A</li>
+				<li>Item B</li>
+				<li>Item C</li>
+			</ol>
+		</section>
+
+
+		<section id="toggle" class="jumbotron text-center" style="display: none">
+			<div class="container">
+				<h1 class="jumbotron-heading">Album example</h1>
+				<p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>
+				<p>
+					<a href="#" class="btn btn-primary my-2">Main call to action</a>
+					<a href="#" class="btn btn-secondary my-2">Secondary action</a>
+				</p>
+			</div>
+		</section>
+
+
+		<hr />
+
+		<section id="crawlme">
+			<a href="/strip.html">Check strip</a><br />
+			<a href="/video.html">Check video</a><br />
+			<a href="/faulty.html">Check broken link</a>
+		</section>
+
+
+		<!-- <section id="vue">
+			<div class="container">
+				<user-name name="Flavio"></user-name>
+				<div id="app">
+					<post v-for="post in posts" v-bind:key="post.id" v-bind:post="post"></post>
+				</div>
+			</div>
+		</section> -->
+
+		<!-- <section id="video">
+			<div id="video-player-main">
+				<div class="iframe16x9-wrapper">
+					<video id='video-big_buck_bunny' class='video-js' controls preload='auto' width='960' height='540' poster='/images/big_buck_bunny.jpg' data-setup='{}'>
+						<source src='/video/big_buck_bunny.mp4' type='video/mp4'>
+						<source src='/video/big_buck_bunny.webm' type='video/webm'>
+						<p class='vjs-no-js'>
+							To view this video please enable JavaScript, and consider upgrading to a web browser that
+							<a href='https://videojs.com/html5-video-support/' target='_blank'>supports HTML5 video</a>
+						</p>
+					</video>
+				</div>
+			</div>
+		</section> -->
+	</main>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
+	<!-- <script src="/dist/plugins.js"></script> -->
+	<!-- <script src="/dist/vendor.js"></script> -->
+	<script src="/dist/main.js"></script>
+	<script src="/dist/vue.js"></script>
+	<script src='https://vjs.zencdn.net/7.5.4/video.min.js'></script>
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+	<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+	<script>
+		window.ga = function() { ga.q.push(arguments) };
+		ga.q = [];
+		ga.l = +new Date;
+		ga('create', 'UA-XXXXX-Y', 'auto');
+		ga('set', 'transport', 'beacon');
+		ga('send', 'pageview')
+
+	</script>
+	<script src="https://www.google-analytics.com/analytics.js" async></script>
+>>>>>>> 9f46994 (complexify)
 </body>
 
 </html>
