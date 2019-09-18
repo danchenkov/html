@@ -1,0 +1,105 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+	<meta charset="utf-8">
+	<title>Sample Form</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="manifest" href="site.webmanifest">
+	<link rel="apple-touch-icon" href="icon.png">
+	<!-- Place favicon.ico in the root directory -->
+
+	<link href="/css/normalize.css" rel="stylesheet">
+	<link href="/css/boilerplate.css" rel="stylesheet">
+	<link href="/css/main.css" rel="stylesheet">
+
+	<link href="https://vjs.zencdn.net/7.5.4/video-js.min.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i|Muli:300,300i,400,400i,600,600i,700,700i&display=swap&subset=cyrillic" rel="stylesheet">
+
+	<meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+	<!--[if IE]>
+		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+	<![endif]-->
+
+	<!-- Add your site or application content here -->
+	<!-- <p>Hello world! This is HTML5 Boilerplate.</p> -->
+
+	<main id="main">
+		<section id="form">
+			<h1>Sample Form</h1>
+			<form accept-charset="UTF-8" action="/" data-remote="true" method="post">
+				<input name="authenticity_token" type="hidden" value="J7CBxfHalt49OSHp27hblqK20c9PgwJ108nDHX/8Cts=" />
+				<p>
+					<label>Title</label><br>
+					<label><input type="radio" name="title" value="mr">Mr</label>
+					<label><input type="radio" name="title" value="mrs">Mrs</label>
+					<label><input type="radio" name="title" value="miss">Miss</label>
+				</p>
+				<p>
+					<label>First name</label><br>
+					<input type="text" name="first_name">
+				</p>
+				<p>
+					<label>Last name</label><br>
+					<input type="text" name="last_name">
+				</p>
+				<p>
+					<label>Email</label><br>
+					<input type="email" name="email" required>
+				</p>
+				<p>
+					<label>Phone number</label><br>
+					<input type="tel" name="phone">
+				</p>
+				<p>
+					<label>Password</label><br>
+					<input type="password" name="password">
+				</p>
+				<p>
+					<label>Country</label><br>
+					<select>
+						<option value="">--Please choose an option--</option>
+					    <option value="RU">Russia</option>
+						<option value="US">United States</option>
+					</select>
+				</p>
+				<p>
+					<label>
+						<input type="checkbox" value="terms">
+						I agree to the <a href="/terms">terms and conditions</a>
+					</label>
+				</p>
+				<p>
+					<button>Sign up</button>
+					<button type="reset">Reset form</button>
+				</p>
+			</form>
+		</section>
+	</main>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+	<!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> -->
+	<!-- <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script> -->
+	<!-- <script src="/dist/plugins.js"></script> -->
+	<!-- <script src="/dist/vendor.js"></script> -->
+	<script src="/dist/index.js"></script>
+
+	<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+	<script>
+		window.ga = function() { ga.q.push(arguments) };
+		ga.q = [];
+		ga.l = +new Date;
+		ga('create', 'UA-XXXXX-Y', 'auto');
+		ga('set', 'transport', 'beacon');
+		ga('send', 'pageview')
+
+	</script>
+	<script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+
+</html>
