@@ -59,6 +59,9 @@ module.exports = {
 		extensions: [".js", ".jsx", ".scss", ".css"]
 	},
 	externals: {
-		Modernizr: "modernizr"
+		$: 'jquery',
+		jQuery: 'jquery',
+		'window.jQuery': 'jquery',
+		Modernizr: 'modernizr'
 	}
 };
