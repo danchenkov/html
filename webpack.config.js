@@ -1,7 +1,6 @@
 const path = require("path");
 const webpack = require("webpack");
 const isDevelopment = process.env.NODE_ENV !== "production";
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const MomentLocalesPlugin = require("moment-locales-webpack-plugin");
 
 module.exports = {

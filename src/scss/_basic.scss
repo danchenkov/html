@@ -39,24 +39,6 @@
 	transition: opacity 0.333333s ease !important;
 }
 
-h1 {
-	font-family: Muli;
-}
-h1+p {
-	margin-top: -0.5rem;
-}
-p {
-	margin-top: 0;
-}
-.deck {
-	font-family: 'Source Sans Pro';
-	font-size: 1rem;
-	font-style: italic;
-}
-.deck::first-line {
-	font-weight: bold;
-}
-
 #main section {
 	width: 100%;
 	max-width: 768px;
@@ -72,23 +54,17 @@ p {
 	font-family: 'Muli', sans-serif;
 }
 
+$gap: 20px;
+
 .grid {
-	margin: auto;
+	margin: 0 0 1em;
 	max-width: 800px;
 	display: grid;
-
-	grid-template-columns: 4.137362637362637fr 1fr;
 	grid-template-rows: 1fr 1fr;
-	grid-gap: 20px;
-}
-
-figure {
-	margin: 0;
-}
-
-figure img {
-	width: 100%;
-	margin: 0;
+	grid-gap: $gap;
+	figure {
+		margin-bottom: 0;
+	}
 }
 
 .item1 {
@@ -124,17 +100,4 @@ figure img {
 	display: none;
 }
 
-
-// x(w) func
-//   	x = (wz - gz - g) / (g + 2yw- 2yg)
-//   	where x - ratio between widths of block 1 and 2
-//   	w - container width
-//   	z - aspect ratio of block 1
-//   	y - aspect ratio of blocks 2 and 3 (considered equal)
-//   	g - gap
-
-//   	Basic calculations:
-//   	w = a + b;
-//   	b = ax;
-//   	az = 2yb + g;
 

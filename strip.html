@@ -11,13 +11,13 @@
 	<link rel="apple-touch-icon" href="icon.png">
 	<!-- Place favicon.ico in the root directory -->
 
-	<link href="/css/normalize.css" rel="stylesheet">
-	<link href="/css/boilerplate.css" rel="stylesheet">
-	<link href="/css/basic.css" rel="stylesheet">
-	<link href="/css/main.css" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+	<link href="/assets/main.css" rel="stylesheet">
 
 	<link href="https://vjs.zencdn.net/7.5.4/video-js.min.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i|Muli:300,300i,400,400i,600,600i,700,700i&display=swap&subset=cyrillic" rel="stylesheet">
 
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<meta name="theme-color" content="#fafafa">
 </head>
 
@@ -61,7 +61,7 @@
 		</section>
 
 		<section id="layout1">
-			<div class="grid">
+			<div class="grid" style="grid-template-columns: 1.5fr 1fr; grid-template-rows: 1.5fr 1fr;">
 				<figure class="item1"><img src="http://placehold.it/500x300" /></figure>
 				<figure class="item2"><img src="http://placehold.it/320x160" /></figure>
 				<figure class="item3"><img src="http://placehold.it/480x160" /></figure>
@@ -70,24 +70,20 @@
 	</main>
 
 	<script>
-		var html = "<p> Unusual<br />, circumstances with some   HTML </p>";
+		var html = "<p> Unusual<br />, circumstances with some HTML </p>";
 		var div = document.createElement("div");
 		div.innerHTML = html;
 		var text = div.textContent || div.innerText || "";
 		console.log("[" + text + "]");
-
 	</script>
 
-
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-	<!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> -->
-	<!-- <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script> -->
-	<!-- <script src="/dist/plugins.js"></script> -->
-	<!-- <script src="/dist/vendor.js"></script> -->
-	<script src="/dist/main.js"></script>
-	<script src="/dist/vue.js"></script>
-	<script src='https://vjs.zencdn.net/7.5.4/video.min.js'></script>
-	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
+	<script src="/assets/main.js"></script>
+	<!-- <script src="/assets/vue.js"></script> -->
+	<!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
+	<!-- <script src="https://vjs.zencdn.net/7.5.4/video.min.js"></script> -->
 
 	<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
 	<script>

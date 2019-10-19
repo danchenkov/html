@@ -1,0 +1,9 @@
+{
+	http_port   8101
+	https_port  8102
+	local_certs
+}
+
+localhost:8100, vue.local:8100
+
+file_server
