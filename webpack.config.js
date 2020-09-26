@@ -7,7 +7,8 @@ module.exports = {
 	mode: isDevelopment ? "development" : "production",
 	entry: {
 		main: "./src/main.js",
-		vue: "./src/vue.js"
+		vue: "./src/vue.js",
+		greensock: "./src/greensock.js"
 	},
 	output: {
 		path: path.resolve(__dirname, "assets"),

@@ -1,107 +1,196 @@
 ::placeholder {
-	color: lightgray;
+    color: lightgray;
 }
+
 h1 {
-	color: darkred;
-	font-family: Muli;
-	+p.subtitle {
-		margin-top: -0.5rem;
-	}
+    color: darkred;
+    font-family: Muli;
+
+    +p.subtitle {
+        margin-top: -0.5rem;
+    }
 }
 
 .deck {
-	font-family: 'Source Sans Pro';
-	font-size: 1.05em;
-	font-style: italic;
-	&::first-line {
-		font-weight: bold;
-	}
+    font-family: 'Source Sans Pro';
+    font-size: 1.05em;
+    font-style: italic;
+
+    &::first-line {
+        font-weight: bold;
+    }
 }
 
 p {
-	margin-top: 0;
-	&::first-line {
-		font-weight: bold;
-		color: #444;
-	}
-	+ol,
-	+ul {
-		margin-top: -0.75rem;
-	}
+    margin-top: 0;
+
+    &::first-line {
+        color: #444;
+        font-weight: bold;
+    }
+
+    +ol,
+    +ul {
+        margin-top: -0.75rem;
+    }
 }
 
 figure {
-	margin: 0;
+    margin: 0;
 }
 
 figure img {
-	width: 100%;
-	margin: 0;
+    margin: 0;
+    width: 100%;
 }
 
 form {
-	font-family: 'Muli', sans-serif;
+    font-family: 'Muli', sans-serif;
 }
 
-input[type="radio"] {
-	margin-right: 0.15em;
-	margin-left: 0.5em;
-}
-blockquote {
-	font-size: 1.75em;
-	font-family: 'Source Sans Pro';
-	padding-left: 2em;
-	padding-right: 2em;
-}
-q {
-	font-style: italic;
-	&:before {
-		content: '“';
-	}
-	&:after {
-		content: '”';
-	}
-}
-cite {
-	&:before {
-		content: '— ';
-	}
-	display: block;
-	margin-left: calc(32% + 1em);
-	text-indent: -1em;
+input,
+textarea {
+    background-color: #fff;
+    border: 1px inset #6666;
+    font-size: 0.9em;
 }
 
-#editor {
-	margin: 0;
-	height: 100%;
-	font-family: 'Helvetica Neue', Arial, sans-serif;
-	color: #333;
-}
-
-textarea, #editor div {
-	display: inline-block;
-	width: 49%;
-	height: 100%;
-	vertical-align: top;
-	box-sizing: border-box;
-	padding: 0 20px;
-	min-height: 12em;
+input {
+    padding: 0.25em 0.5em;
 }
 
 textarea {
-	border: none;
-	border-right: 1px solid #ccc;
-	resize: none;
-	outline: none;
-	background-color: #f6f6f6;
-	font-size: 14px;
-	font-family: 'Monaco', courier, monospace;
-	padding: 20px;
+    font-family: 'Monaco', courier, monospace;
+    outline: none;
+    padding: 0.75em;
+    resize: none;
+    // width: stretch;
+    // width: -webkit-fill-available;
+}
+
+input[type='text'],
+input[type='password'],
+input[type='tel'],
+input[type='email'],
+select,
+textarea {
+    width: 60%;
+}
+
+input[type='radio'] {
+    margin-left: 0.5em;
+    margin-right: 0.15em;
+}
+
+button {
+    font-size: 1em;
+    padding: 0.5rem 1rem;
+    color: rgba(0, 0, 0, 0.8);
+    border: transparent;
+    background-color: #e6e6e6;
+    text-decoration: none;
+    border-radius: 2px;
+    display: inline-block;
+    line-height: normal;
+    white-space: nowrap;
+    vertical-align: middle;
+    text-align: center;
+    cursor: pointer;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: inherit;
+    text-transform: none;
+    overflow: visible;
+    letter-spacing: 0.01em;
+}
+
+.button--primary,
+.button--selected,
+a.button--primary,
+a.button--selected,
+.button--success,
+.button--error,
+.button--warning,
+.button--secondary {
+    color: #fff;
+    border-radius: 4px;
+    text-shadow: 0 1px 1px rgb(0 0 0 / 20%);
+}
+
+.button--primary {
+    background-color: hsl(209, 100%, 45%);
+}
+
+.button--success {
+    background-color: hsl(134, 74%, 42%);
+}
+
+.button--error {
+    background-color: hsl(0, 57%, 51%);
+}
+
+.button--warning {
+    background-color: hsl(29, 84%, 48%);
+}
+
+.button--secondary {
+    background-color: hsl(194, 70%, 56%);
 }
 
 code {
-	color: #f66;
+    color: #f66;
 }
 
-:lang(en) *[lang="ru-ru"] { display: none; }
-:lang(ru) *[lang="en-us"] { display: none; }
+blockquote {
+    font-family: 'Source Sans Pro';
+    font-size: 1.75em;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+q {
+    font-style: italic;
+
+    &::before {
+        content: '“';
+    }
+
+    &::after {
+        content: '”';
+    }
+}
+
+cite {
+    display: block;
+    margin-left: calc(32% + 1em);
+    text-indent: -1em;
+
+    &::before {
+        content: '— ';
+    }
+}
+
+#editor {
+    color: #333;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    height: 100%;
+    margin: 0;
+}
+
+#editor div {
+    box-sizing: border-box;
+    display: inline-block;
+    height: 100%;
+    min-height: 12em;
+    padding: 0 20px;
+    vertical-align: top;
+    width: 49%;
+}
+
+:lang(en) *[lang='ru-ru'] { display: none; }
+:lang(ru) *[lang='en-us'] { display: none; }
