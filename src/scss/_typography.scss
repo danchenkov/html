@@ -37,35 +37,60 @@ p {
 
 figure {
     margin: 0;
-}
 
-figure img {
-    margin: 0;
-    width: 100%;
+    & img {
+        margin: 0;
+        width: 100%;
+    }
 }
 
 form {
     font-family: 'Muli', sans-serif;
+
+    @media (min-width: 992px) {
+        max-width: 600px;
+        // columns: 2;
+        // break-inside: avoid-column;
+    }
+}
+
+fieldset.scheduler-border {
+    border: 1px groove #ddd !important;
+    padding: 0 1.4em 1.4em 1.4em !important;
+    margin: 0 0 1.5em 0 !important;
+    -webkit-box-shadow: 0 0 0 0 #000;
+    box-shadow: 0 0 0 0 #000;
+}
+
+legend.scheduler-border {
+    width: inherit; /* Or auto */
+    padding: 0 10px; /* To give a bit of padding on the left and right */
+    border-bottom: none;
 }
 
 input,
+select,
 textarea {
     background-color: #fff;
     border: 1px inset #6666;
+    font-family: 'Monaco', Courier, monospace;
     font-size: 0.9em;
 }
 
-input {
+input,
+select {
     padding: 0.25em 0.5em;
+
+    &:invalid {
+        background-color: hsla(0, 100%, 55%, 0.2);
+        color: #f00;
+    }
 }
 
 textarea {
-    font-family: 'Monaco', courier, monospace;
     outline: none;
     padding: 0.75em;
     resize: none;
-    // width: stretch;
-    // width: -webkit-fill-available;
 }
 
 input[type='text'],
@@ -74,7 +99,8 @@ input[type='tel'],
 input[type='email'],
 select,
 textarea {
-    width: 60%;
+    width: stretch;
+    width: -webkit-fill-available;
 }
 
 input[type='radio'] {
@@ -173,6 +199,23 @@ cite {
     &::before {
         content: '— ';
     }
+}
+
+.flash-message {
+    margin: 0.75rem 0;
+    padding: 0.333333rem 0.85rem 0.4rem;
+    min-height: 3.6ex;
+    background-color: hsla(120, 73%, 97%);
+    color: darkgreen;
+
+    &.error {
+        background-color: hsla(0, 73%, 97%);
+        color: firebrick;
+    }
+
+    width: 60%;
+    border-radius: 0.5em;
+    border: 0.5px outset hsla(120, 10%, 75%);
 }
 
 #editor {

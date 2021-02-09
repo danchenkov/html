@@ -11,15 +11,15 @@
 	<link rel="apple-touch-icon" href="icon.png">
 	<!-- Place favicon.ico in the root directory -->
 
-	<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+	<!-- <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"> -->
 	<!-- <link type="text/css" rel="stylesheet" href="https://unpkg.com/purecss@2.0.5/build/pure-min.css" integrity="sha384-LTIDeidl25h2dPxrB2Ekgc9c7sEC3CWGM6HeFmuDNUjX76Ert4Z4IY714dhZHPLd" crossorigin="anonymous"> -->
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-	<link type="text/css" rel="stylesheet" href="https://vjs.zencdn.net/7.5.4/video-js.min.css">
+	<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous"> -->
+	<!-- <link type="text/css" rel="stylesheet" href="https://vjs.zencdn.net/7.5.4/video-js.min.css"> -->
 
 	<link type="text/css" rel="stylesheet" href="/assets/main.css">
-	<link type="text/css" rel="stylesheet" href="/assets/vendor/flatpickr/flatpickr.min.css">
+	<!-- <link type="text/css" rel="stylesheet" href="/assets/vendor/flatpickr/flatpickr.min.css"> -->
 
-	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i|Muli:300,300i,400,400i,600,600i,700,700i&display=swap&subset=cyrillic">
+	<!-- <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i|Muli:300,300i,400,400i,600,600i,700,700i&display=swap&subset=cyrillic"> -->
 
 	<meta name="theme-color" content="#fafafa">
 </head>
@@ -36,71 +36,72 @@
 		<section id="form" class="jumbotron">
 			<h1>Sample Form</h1>
 			
-			<div id="flash-message"></div>
+			<div id="flash-message" class="flash-message"></div>
 
-			<form accept-charset="UTF-8" action="/handle" data-remote="true" method="post">
-				<p>
+			<form id="sample-form" accept-charset="UTF-8" action="/handle" data-remote="true" method="post">
+				<div>
 					<fieldset>
-						<label>Title</label><br />
-						<input type="radio" id="mr" name="title" value="mr">
+						<!-- <label>Title</label><br /> -->
+						<legend>Title</legend><br />
+						<input type="radio" id="mr" name="title" value="Mr.">
 						<label for="mr">Mr.</label>
 
-						<input type="radio" id="mrs" name="title" value="mrs">
+						<input type="radio" id="mrs" name="title" value="Mrs.">
 						<label for="mrs">Mrs.</label>
 
-						<input type="radio" id="miss" name="title" value="miss">
+						<input type="radio" id="miss" name="title" value="Miss">
 						<label for="miss">Miss</label>
 
-						<input type="radio" id="ms" name="title" value="ms">
+						<input type="radio" id="ms" name="title" value="Ms.">
 						<label for="ms">Ms.</label>
 					</fieldset>
-				</p>
-				<p>
-					<label for="first_name">First name</label><br>
-					<input type="text" name="first_name">
-				</p>
-				<p>
-					<label for="last_name">Last name</label><br>
-					<input type="text" name="last_name">
-				</p>
-				<p>
-					<label for="email">Email</label><br>
-					<input type="email" name="email" required>
-				</p>
-
-				<p>
-					<label for="birthdate">Birthdate</label><br />
-					<input id="birthdate" type="text" name="birthdate">
-				<p>
-					<label for="phone">Phone number</label><br>
+				</div>
+				<div>
+					<fieldset>
+						<legend>Name</legend>
+						<label for="first_name" class="form-label">First name</label><br>
+						<input type="text" name="first_name"><br>
+						<label for="last_name" class="form-label">Last name</label><br>
+						<input type="text" name="last_name">
+					</fieldset>
+				</div>
+				<div>
+					<label for="phone" class="form-label">Phone number</label><br>
 					<input type="tel" name="phone" placeholder="+X (XXX) XXX-XXXX">
-				</p>
-				<p>
-					<label for="password">Password</label><br>
-					<input type="password" name="password">
-				</p>
-				<p>
-					<label for="country">Country</label><br>
+				</div>
+				<div>
+					<label for="email" class="form-label">Email</label><br>
+					<input type="email" name="email" required>
+				</div>
+				<div>
+					<label for="password" class="form-label">Password</label><br>
+					<input id="password" type="password" name="password">
+					<input type="hidden" name="hash">
+				</div>
+				<div>
+					<label for="birthdate" class="form-label">Birthdate</label><br />
+					<input id="birthdate" type="date" name="birthdate">
+				</div>
+				<div>
+					<label for="country" class="form-label">Country</label><br>
 					<select name="country">
 						<option value="">--Please choose an option--</option>
 						<option value="RU">Russia</option>
 						<option value="US">United States</option>
 					</select>
-				</p>
-				<p>
-					<label for="bio">Bio</label><br>
-					<textarea name="bio" placeholder="Write a short bio in about 50-300 words" rows="5" max-rows="20"></textarea>
-				</p>
-				<p>
-					<label>
-						<input type="checkbox" name="terms" value="agree">
-						I agree to the <a href="/terms">terms and conditions</a>
-					</label>
-				</p>
-				<p>
-					<button class="button--primary">Sign up</button>
-					<button class="button--primary button--error" type="reset">Reset form</button>
-				</p>
+				</div>
+				<div>
+					<label for="bio" class="form-label">Bio</label><br>
+					<textarea name="bio" placeholder="Write a short bio in about 50-300 words" rows="3" max-rows="6"></textarea>
+				</div>
+				<div>
+					<input id="terms" type="checkbox" required name="terms" value="agree" class="form-check-input">
+					<label class="form-check-label" for="terms">I agree to the <a href="/terms">terms and conditions</a></label>
+				</div>
+				<div class="form-check">
+					<button id="submit" class="button--primary" type="submit">Sign up</button>
+					<button id="reset" class="button--primary button--error" type="reset">Reset form</button>
+				</div>
 			</form>
 
 			<hr />
@@ -109,20 +110,20 @@
 	</main>
 
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-	<script>window.jQuery || document.write('<script src="/assets/vendor/jquery-3.4.1.min.js"><\/script>')</script>
-	<script src="/assets/main.js"></script>
-	<script src="/assets/vendor/flatpickr/flatpickr.min.js"></script>
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script> -->
+	<!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> -->
+	<!-- <script>window.jQuery || document.write('<script src="/assets/vendor/jquery-3.4.1.min.js"><\/script>')</script> -->
+	<script type="module" src="/assets/form.js"></script>
+	<!-- <script src="/assets/vendor/flatpickr/flatpickr.min.js"></script> -->
 	<!-- <script src="/assets/vue.js"></script> -->
 	<!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
 	<!-- <script src="https://vjs.zencdn.net/7.5.4/video.min.js"></script> -->
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+	<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script> -->
 
-	<script>flatpickr("#birthdate", {});</script>
+	<!-- <script>flatpickr("#birthdate", {});</script> -->
 
 	<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-	<script>
+	<!-- <script>
 		window.ga = function() { ga.q.push(arguments) };
 		ga.q = [];
 		ga.l = +new Date;
@@ -130,8 +131,8 @@
 		ga('set', 'transport', 'beacon');
 		ga('send', 'pageview')
 
-	</script>
-	<script src="https://www.google-analytics.com/analytics.js" async></script>
+	</script> -->
+	<!-- <script src="https://www.google-analytics.com/analytics.js" async></script> -->
 </body>
 
 </html>
