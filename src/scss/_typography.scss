@@ -80,11 +80,6 @@ textarea {
 input,
 select {
     padding: 0.25em 0.5em;
-
-    &:invalid {
-        background-color: hsla(0, 100%, 55%, 0.2);
-        color: #f00;
-    }
 }
 
 textarea {
@@ -93,14 +88,29 @@ textarea {
     resize: none;
 }
 
-input[type='text'],
-input[type='password'],
-input[type='tel'],
-input[type='email'],
 select,
 textarea {
     width: stretch;
     width: -webkit-fill-available;
+}
+
+input[type='text'],
+input[type='password'],
+input[type='tel'],
+input[type='email'] {
+    width: stretch;
+    width: -webkit-fill-available;
+
+    &:invalid {
+        background-color: hsla(0, 100%, 55%, 0.2);
+        color: #f00;
+    }
+
+    &.form-control.invalid,
+    &.form-control.invalid:focus {
+        background-color: hsla(0, 100%, 55%, 0.2);
+        color: #f00;
+    }
 }
 
 input[type='radio'] {
@@ -116,29 +126,13 @@ button {
     background-color: #e6e6e6;
     text-decoration: none;
     border-radius: 2px;
-    display: inline-block;
-    line-height: normal;
     white-space: nowrap;
-    vertical-align: middle;
-    text-align: center;
     cursor: pointer;
-    -webkit-user-drag: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
     font-family: inherit;
-    text-transform: none;
-    overflow: visible;
     letter-spacing: 0.01em;
 }
 
 .button--primary,
-.button--selected,
-a.button--primary,
-a.button--selected,
 .button--success,
 .button--error,
 .button--warning,
@@ -201,7 +195,12 @@ cite {
     }
 }
 
+div.form-check {
+    margin: 1.5rem 0;
+}
+
 .flash-message {
+    display: none;
     margin: 0.75rem 0;
     padding: 0.333333rem 0.85rem 0.4rem;
     min-height: 3.6ex;
