@@ -6,7 +6,7 @@
 	local_certs
 }
 
-vue.local {
+html.local.test {
 	encode gzip
 	file_server
 
@@ -18,5 +18,5 @@ vue.local {
 }
 
 localhost {
-	redir https://vue.local:6081{uri}
+	redir https://html.local.test:6081{uri}
 }
