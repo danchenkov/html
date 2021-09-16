@@ -1,0 +1,237 @@
+::placeholder {
+    color: lightgray;
+}
+
+h1 {
+    color: darkred;
+    font-family: Muli;
+
+    +p.subtitle {
+        margin-top: -0.5rem;
+    }
+}
+
+.deck {
+    font-family: 'Source Sans Pro';
+    font-size: 1.05em;
+    font-style: italic;
+
+    &::first-line {
+        font-weight: bold;
+    }
+}
+
+p {
+    margin-top: 0;
+
+    &::first-line {
+        color: #444;
+        font-weight: bold;
+    }
+
+    +ol,
+    +ul {
+        margin-top: -0.75rem;
+    }
+}
+
+figure {
+    margin: 0;
+
+    & img {
+        margin: 0;
+        width: 100%;
+    }
+}
+
+form {
+    font-family: 'Muli', sans-serif;
+
+    @media (min-width: 992px) {
+        max-width: 600px;
+        // columns: 2;
+        // break-inside: avoid-column;
+    }
+}
+
+fieldset.scheduler-border {
+    border: 1px groove #ddd !important;
+    padding: 0 1.4em 1.4em 1.4em !important;
+    margin: 0 0 1.5em 0 !important;
+    -webkit-box-shadow: 0 0 0 0 #000;
+    box-shadow: 0 0 0 0 #000;
+}
+
+legend.scheduler-border {
+    width: inherit; /* Or auto */
+    padding: 0 10px; /* To give a bit of padding on the left and right */
+    border-bottom: none;
+}
+
+input,
+select,
+textarea {
+    background-color: #fff;
+    border: 1px inset #6666;
+    font-family: 'Monaco', Courier, monospace;
+    font-size: 0.9em;
+}
+
+input,
+select {
+    padding: 0.25em 0.5em;
+}
+
+textarea {
+    outline: none;
+    padding: 0.75em;
+    resize: none;
+}
+
+select,
+textarea {
+    width: stretch;
+    width: -webkit-fill-available;
+}
+
+input[type='text'],
+input[type='password'],
+input[type='tel'],
+input[type='email'] {
+    width: stretch;
+    width: -webkit-fill-available;
+
+    &:invalid {
+        background-color: hsla(0, 100%, 55%, 0.2);
+        color: #f00;
+    }
+
+    &.form-control.invalid,
+    &.form-control.invalid:focus {
+        background-color: hsla(0, 100%, 55%, 0.2);
+        color: #f00;
+    }
+}
+
+input[type='radio'] {
+    margin-left: 0.5em;
+    margin-right: 0.15em;
+}
+
+button {
+    font-size: 1em;
+    padding: 0.5rem 1rem;
+    color: rgba(0, 0, 0, 0.8);
+    border: transparent;
+    background-color: #e6e6e6;
+    text-decoration: none;
+    border-radius: 2px;
+    white-space: nowrap;
+    cursor: pointer;
+    font-family: inherit;
+    letter-spacing: 0.01em;
+}
+
+.button--primary,
+.button--success,
+.button--error,
+.button--warning,
+.button--secondary {
+    color: #fff;
+    border-radius: 4px;
+    text-shadow: 0 1px 1px rgb(0 0 0 / 20%);
+}
+
+.button--primary {
+    background-color: hsl(209, 100%, 45%);
+}
+
+.button--success {
+    background-color: hsl(134, 74%, 42%);
+}
+
+.button--error {
+    background-color: hsl(0, 57%, 51%);
+}
+
+.button--warning {
+    background-color: hsl(29, 84%, 48%);
+}
+
+.button--secondary {
+    background-color: hsl(194, 70%, 56%);
+}
+
+code {
+    color: #f66;
+}
+
+blockquote {
+    font-family: 'Source Sans Pro';
+    font-size: 1.75em;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+q {
+    font-style: italic;
+
+    &::before {
+        content: '“';
+    }
+
+    &::after {
+        content: '”';
+    }
+}
+
+cite {
+    display: block;
+    margin-left: calc(32% + 1em);
+    text-indent: -1em;
+
+    &::before {
+        content: '— ';
+    }
+}
+
+div.form-check {
+    margin: 1.5rem 0;
+}
+
+.flash-message {
+    margin: 0.75rem 0;
+    padding: 0.333333rem 0.85rem 0.4rem;
+    min-height: 3.6ex;
+    background-color: hsla(120, 73%, 97%);
+    color: darkgreen;
+
+    &.error {
+        background-color: hsla(0, 73%, 97%);
+        color: firebrick;
+    }
+
+    width: 60%;
+    border-radius: 0.5em;
+    border: 0.5px outset hsla(120, 10%, 75%);
+}
+
+#editor {
+    color: #333;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    height: 100%;
+    margin: 0;
+}
+
+#editor div {
+    box-sizing: border-box;
+    display: inline-block;
+    height: 100%;
+    min-height: 12em;
+    padding: 0 20px;
+    vertical-align: top;
+    width: 49%;
+}
+
+:lang(en) *[lang='ru-ru'] { display: none; }
+:lang(ru) *[lang='en-us'] { display: none; }

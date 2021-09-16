@@ -1,0 +1,27 @@
+{
+    "devDependencies": {
+        "eslint": "^7.19.0",
+        "stylelint": "^13.13.1",
+        "stylelint-config-standard": "^20.0.0"
+    },
+    "name": "html",
+    "description": "HTML boilerplate pages with examples of video, list style, vue operations",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "bin/esbuild src/form.mjs --bundle --outfile=assets/form.mjs"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/danchenkov/boilerplate.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/danchenkov/boilerplate/issues"
+    },
+    "homepage": "https://github.com/danchenkov/boilerplate#readme",
+    "dependencies": {
+        "jquery": "^3.5.1"
+    }
+}
