@@ -13,11 +13,7 @@
 
 	<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
 	<!-- <link type="text/css" rel="stylesheet" href="https://unpkg.com/purecss@2.0.5/build/pure-min.css" integrity="sha384-LTIDeidl25h2dPxrB2Ekgc9c7sEC3CWGM6HeFmuDNUjX76Ert4Z4IY714dhZHPLd" crossorigin="anonymous"> -->
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-	<link type="text/css" rel="stylesheet" href="https://vjs.zencdn.net/7.5.4/video-js.min.css">
-
 	<link type="text/css" rel="stylesheet" href="/assets/main.css">
-	<link type="text/css" rel="stylesheet" href="/assets/vendor/flatpickr/flatpickr.min.css">
 
 	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i|Muli:300,300i,400,400i,600,600i,700,700i&display=swap&subset=cyrillic">
 
@@ -35,10 +31,10 @@
 	<main id="main">
 		<section id="form" class="jumbotron">
 			<h1>Search Form</h1>
-			
+
 			<div id="flash-message" class="flash-message"></div>
 
-			<form id="search-form" accept-charset="UTF-8" action="/search" data-remote="true" method="post">
+			<form id="search-form" accept-charset="UTF-8" data-remote="true" method="post">
 				<p>
 					<fieldset>
 						<label>Search</label><br />
@@ -48,6 +44,7 @@
 			</form>
 
 			<div id="search-results">
+
 			</div>
 
 			<hr />
@@ -59,14 +56,56 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 	<script>window.jQuery || document.write('<script src="/assets/vendor/jquery-3.4.1.min.js"><\/script>')</script>
+	<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6" crossorigin="anonymous"></script>
 	<script src="/assets/main.js"></script>
-	<!-- <script src="/assets/vendor/flatpickr/flatpickr.min.js"></script> -->
-	<!-- <script src="/assets/vue.js"></script> -->
-	<!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
-	<!-- <script src="https://vjs.zencdn.net/7.5.4/video.min.js"></script> -->
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 
-	<!-- <script>flatpickr("#birthdate", {});</script> -->
+<script>
+const pages = [
+	{
+		"categories": null,
+		"contents": "  КАК Я ЖЕНИЛСЯ ВТОРОЙ РАЗ И ЧТО ИЗ ЭТОГО ВЫШЛО  Его фамилия была&#160;— Муха и он умер лет ещё до 2000 года.",
+		"permalink": "/relatives/second_wife/",
+		"tags": null,
+		"title": "Как я женился второй раз и что из этого вышло"
+	},
+	{
+		"categories": null,
+		"contents": "  КАК Я УЧИЛ ЯПОНСКИЙ ЯЗЫК  Попал я после окончания Дальневосточного госуниверситета",
+		"permalink": "/misc/japanese-language/",
+		"tags": null,
+		"title": "Как я учил японский язык"
+	},
+	{
+		"categories": null,
+		"contents": "ПАМЯТНИК НА МЕСТЕ СОВЕТСКИХ РАССТР Через неделю после нашей первойй встречи ",
+		"permalink": "/misc/mass-executions/",
+		"tags": null,
+		"title": "Памятник на месте советских расстрелов"
+	}
+]
+
+const fuseOptions = {
+	includeScore: true,
+	includeMatches: true,
+	keys: [
+	{ name: 'title', weight: 0.8 },
+	{ name: 'contents', weight: 0.5 },
+	{ name: 'tags', weight: 0.3 },
+	{ name: 'categories', weight: 0.3 }
+	]
+}
+const fuse = new Fuse(pages, fuseOptions)
+const result = fuse.search("первойй")
+
+console.log(result.length)
+
+$.each(result, function (key, value) {
+	const contents = value.item.contents
+	$("#search-results").append(contents)
+});
+
+</script>
+
 
 	<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
 	<script>

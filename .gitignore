@@ -23,15 +23,25 @@
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 
-/public/packs
-/public/packs-test
-/node_modules
-/yarn-error.log
-yarn-debug.log*
-.yarn-integrity
-
 # Other
 .DS_Store
-*.code-workspace
-*.sublime-*
+.vscode/settings.json
 .yarn
+.yarn-integrity
+*.code-workspace
+*.map
+*.sublime-*
+backstop_data
+backstop*.json
+bin
+cypress/integration/examples
+cypress/screenshots
+cypress/videos
+devsite
+local
+node_modules
+public
+vendor
+web/scss/dist
+yarn-debug.log*
+yarn-error.log
