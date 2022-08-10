@@ -1,0 +1,45 @@
+<!doctype html>
+<html class="no-js" lang="en-US">
+
+<head>
+	<meta charset="utf-8">
+	<title>Modules</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="manifest" href="site.webmanifest">
+	<link rel="apple-touch-icon" href="icon.png">
+	<!-- Place favicon.ico in the root directory -->
+
+	<link type="text/css" rel="stylesheet" href="/assets/main.css">
+
+	<!-- <link rel="modulepreload" href="/assets/main.js"> -->
+	<!-- <link rel="modulepreload" href="/assets/form.js"> -->
+	<link rel="modulepreload" href="/assets/modules.js">
+
+	<meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+	<!--[if IE]>
+		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+	<![endif]-->
+
+	<main id="main">
+		<h1>Modules</h1>
+		<button class="circle">Circle</button>
+		<button class="square">Square</button>
+		<button class="triangle">Triangle</button>
+	</main>
+
+	<!-- <script type="module" src="/assets/main.js"></script>
+	<script nomodule src="/assets/fallback/main.js"></script>
+
+	<script type="module" src="/assets/form.js"></script>
+	<script nomodule src="/assets/fallback/form.js"></script> -->
+
+	<script type="module" src="/assets/modules.js"></script>
+	<script nomodule src="/assets/fallback/modules.js"></script>
+</body>
+
+</html>
