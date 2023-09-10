@@ -140,6 +140,5 @@ $(document).ready(function () {
                 }).trigger('input')
             })
         })
-
     }
 })

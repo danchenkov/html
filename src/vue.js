@@ -1,12 +1,12 @@
-import "./scss/main";
+import "./scss/main"
 
-$(document).ready(function() {
-	Vue.config.devtools = true;
+$(document).ready(function () {
+	Vue.config.devtools = true
 
 	Vue.component("post", {
 		props: ["post"],
 		template: "<h3>{{ post.title }}</h3>"
-	});
+	})
 
 	new Vue({
 		el: "#app",
@@ -22,7 +22,7 @@ $(document).ready(function() {
 				{ id: 8, title: "Target H8" }
 			]
 		}
-	});
+	})
 
 	new Vue({
 		el: "#editor",
@@ -30,14 +30,14 @@ $(document).ready(function() {
 			input: "# hello"
 		},
 		computed: {
-			compiledMarkdown: function() {
-				return marked(this.input, { sanitize: true });
+			compiledMarkdown: function () {
+				return marked(this.input, { sanitize: true })
 			}
 		},
 		methods: {
-			update: _.debounce(function(e) {
-				this.input = e.target.value;
+			update: _.debounce(function (e) {
+				this.input = e.target.value
 			}, 300)
 		}
-	});
-});
+	})
+})

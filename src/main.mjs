@@ -1,12 +1,12 @@
 import jQuery from "jquery"
 window.$ = window.jQuery = jQuery
 
-$(document).ready(function() {
+$(document).ready(function () {
     var toggleButton = $('<input/>').attr({ type: 'button', id: 'toggleme', name: 'toggleme', class: 'btn btn-primary', value: 'Toggle!' })
 
     $("#main>section.with-toggle-button").append(toggleButton)
 
-    toggleButton.on("click", function() {
+    toggleButton.on("click", function () {
         $("#main>section.toggleable").toggle()
     })
 
