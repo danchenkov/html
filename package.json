@@ -8,7 +8,7 @@
     "description": "HTML boilerplate pages with examples of video, list style, vue operations",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "build": "bin/esbuild src/form.mjs --bundle --outfile=assets/form.mjs"
+        "build": "esbuild src/form.mjs --bundle --outfile=assets/form.mjs"
     },
     "repository": {
         "type": "git",
@@ -22,6 +22,9 @@
     },
     "homepage": "https://github.com/danchenkov/boilerplate#readme",
     "dependencies": {
-        "jquery": "^3.5.1"
+        "color": "^4.2.3",
+        "jquery": "^3.5.1",
+        "js-joda": "^1.11.0",
+        "libphonenumber-js": "^1.10.44"
     }
 }
