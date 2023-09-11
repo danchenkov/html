@@ -1,11 +1,15 @@
 {
-  "short_name": "",
-  "name": "",
-  "icons": [{
-    "src": "icon.png",
-    "type": "image/png",
-    "sizes": "192x192"
-  }],
+  "short_name": "modules",
+  "name": "JS Modules demonstration",
+  "description": "Demonstration of JS Modules and fallback with esbuild",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "/icon.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ],
   "start_url": "/?utm_source=homescreen",
   "background_color": "#fafafa",
   "theme_color": "#fafafa"
