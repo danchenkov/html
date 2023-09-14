@@ -18,9 +18,9 @@
     "homepage": "https://github.com/danchenkov/boilerplate#readme",
     "dependencies": {
         "@babel/preset-env": "^7.22.15",
+        "@js-joda/core": "^5.5.3",
         "color": "^4.2.3",
         "global": "^4.4.0",
-        "js-joda": "^1.11.0",
         "libphonenumber-js": "^1.10.44"
     },
     "devDependencies": {
@@ -31,7 +31,7 @@
         "eslint-plugin-html": "^7.1.0",
         "eslint-plugin-json": "^3.1.0",
         "stylelint": "^15.10.3",
-        "stylelint-config-rational-order": "^0.1.2",
+        "stylelint-config-rational-order": "^0.0.4",
         "stylelint-config-recommended-scss": "^13.0.0",
         "stylelint-config-standard": "^20.0.0",
         "stylelint-order": "^6.0.3",
