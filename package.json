@@ -4,7 +4,7 @@
     "author": "Alexei Danchenkov",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "build": "concurrently --names 'modules,nomodules' --prefix-colors 'yellow,blue' --kill-others 'esbuild src/modules.js --bundle --outfile=assets/modules.js' 'esbuild src/nomodules.js --bundle --outfile=assets/fallback/nomodules.js'"
+        "build": "sass src/scss:css && esbuild src/main.js --bundle --minify --sourcemap --outfile=js/main.js && esbuild src/main.js --bundle --minify --sourcemap --target=chrome58,firefox57,safari11 --outfile=js/fallback/main.js"
     },
     "repository": {
         "type": "git",
@@ -17,6 +17,9 @@
     },
     "homepage": "https://github.com/danchenkov/boilerplate#readme",
     "dependencies": {
+        "@babel/preset-env": "^7.22.15",
+        "color": "^4.2.3",
+        "global": "^4.4.0",
         "js-joda": "^1.11.0",
         "libphonenumber-js": "^1.10.44"
     },
@@ -28,9 +31,9 @@
         "eslint-plugin-html": "^7.1.0",
         "eslint-plugin-json": "^3.1.0",
         "stylelint": "^15.10.3",
-        "stylelint-config-standard": "^20.0.0",
         "stylelint-config-rational-order": "^0.1.2",
         "stylelint-config-recommended-scss": "^13.0.0",
+        "stylelint-config-standard": "^20.0.0",
         "stylelint-order": "^6.0.3",
         "stylelint-scss": "^5.1.0",
         "stylelint-semantic-groups": "^1.2.0"

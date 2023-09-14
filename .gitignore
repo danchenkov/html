@@ -45,3 +45,5 @@ vendor
 web/scss/dist
 yarn-debug.log*
 yarn-error.log
+/css
+/js
