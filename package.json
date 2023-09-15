@@ -4,7 +4,7 @@
     "author": "Alexei Danchenkov",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "build": "sass src/scss:css && esbuild src/main.js --bundle --minify --sourcemap --outfile=js/main.js && esbuild src/main.js --bundle --minify --sourcemap --target=chrome58,firefox57,safari11 --outfile=js/fallback/main.js"
+        "build": "sass src/scss:css && esbuild src/main.js --bundle --minify --outfile=js/main.js && esbuild src/main.js --bundle --minify --target=chrome58,firefox57,safari11 --outfile=js/fallback/main.js"
     },
     "repository": {
         "type": "git",
