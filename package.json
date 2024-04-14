@@ -24,13 +24,13 @@
         "libphonenumber-js": "^1.10.44"
     },
     "devDependencies": {
-        "esbuild": "^0.19.2",
-        "eslint": "^8.49.0",
+        "esbuild": "^0.19.12",
+        "eslint": "^8.57.0",
         "eslint-config-google": "^0.14.0",
         "eslint-plugin-cypress": "^2.14.0",
         "eslint-plugin-html": "^7.1.0",
         "eslint-plugin-json": "^3.1.0",
-        "stylelint": "^15.10.3",
+        "stylelint": "^15.11.0",
         "stylelint-config-rational-order": "^0.0.4",
         "stylelint-config-recommended-scss": "^13.0.0",
         "stylelint-config-standard": "^20.0.0",
