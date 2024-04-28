@@ -38,6 +38,7 @@
 .vscode/settings.json
 .yarn
 .yarn-integrity
+pnpm-lock.yaml
 *.code-workspace
 *.map
 *.sublime-*

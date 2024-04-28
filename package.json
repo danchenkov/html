@@ -17,25 +17,25 @@
     },
     "homepage": "https://github.com/danchenkov/boilerplate#readme",
     "dependencies": {
-        "@babel/preset-env": "^7.22.15",
-        "@js-joda/core": "^5.5.3",
+        "@babel/preset-env": "^7.24.4",
+        "@js-joda/core": "^5.6.2",
         "color": "^4.2.3",
         "global": "^4.4.0",
-        "libphonenumber-js": "^1.10.44"
+        "libphonenumber-js": "^1.10.60"
     },
     "devDependencies": {
         "esbuild": "^0.19.12",
         "eslint": "^8.57.0",
         "eslint-config-google": "^0.14.0",
-        "eslint-plugin-cypress": "^2.14.0",
+        "eslint-plugin-cypress": "^2.15.2",
         "eslint-plugin-html": "^7.1.0",
         "eslint-plugin-json": "^3.1.0",
         "stylelint": "^15.11.0",
         "stylelint-config-rational-order": "^0.0.4",
-        "stylelint-config-recommended-scss": "^13.0.0",
+        "stylelint-config-recommended-scss": "^13.1.0",
         "stylelint-config-standard": "^20.0.0",
-        "stylelint-order": "^6.0.3",
-        "stylelint-scss": "^5.1.0",
-        "stylelint-semantic-groups": "^1.2.0"
+        "stylelint-order": "^6.0.4",
+        "stylelint-scss": "^5.3.2",
+        "stylelint-semantic-groups": "^1.2.1"
     }
 }
