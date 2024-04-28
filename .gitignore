@@ -25,6 +25,16 @@
 
 # Other
 .DS_Store
+/bin
+/css
+/js
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
 .vscode/settings.json
 .yarn
 .yarn-integrity
@@ -33,7 +43,6 @@
 *.sublime-*
 backstop_data
 backstop*.json
-bin
 cypress/integration/examples
 cypress/screenshots
 cypress/videos
@@ -42,8 +51,6 @@ local
 node_modules
 public
 vendor
-web/scss/dist
+/web/scss/dist
 yarn-debug.log*
 yarn-error.log
-/css
-/js
