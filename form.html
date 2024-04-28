@@ -1,0 +1,44 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>JS Modules example</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="apple-touch-icon" href="/icon.png">
+
+    <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+    <!--[if IE]>
+		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+	<![endif]-->
+
+    <main id="main">
+        <section id="form">
+            <form id="mform">
+                <input type="text" name="name" placeholder="Name" />
+                <input type="email" name="email" placeholder="Email" />
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+</body>
+
+<script>
+    function onFormSubmit(event) {
+        event.preventDefault();
+        const data = new FormData(event.target);
+        const name = data.get("name");
+        const email = data.get("email");
+        console.log(`Name: ${name}, Email: ${email}`);
+    }
+    const form = document.getElementById("mform");
+    form.addEventListener("submit", onFormSubmit);
+</script>
+
+</html>
