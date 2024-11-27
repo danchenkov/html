@@ -16,11 +16,11 @@ class Circle {
     }
 
     draw() {
-        var color = Color(this.color)
+        const color = Color(this.color)
         this.ctx.fillStyle = color
         this.ctx.strokeStyle = color.desaturate(0.4).darken(0.25).hex()
         this.ctx.lineWidth = 3
-        this.ctx.lineJoin = "miter"
+        this.ctx.lineJoin = 'miter'
         this.ctx.beginPath()
         this.ctx.arc(this.x, this.y, this.radius, degToRad(0), degToRad(360), false)
         this.ctx.closePath()
@@ -29,18 +29,18 @@ class Circle {
     }
 
     reportArea() {
-        let listItem = document.createElement('li')
+        const listItem = document.createElement('li')
         listItem.textContent = `${this.name} area is ${Math.round(Math.PI * (this.radius * this.radius))}px squared.`
 
-        let list = document.getElementById(this.listId)
+        const list = document.getElementById(this.listId)
         list.appendChild(listItem)
     }
 
     reportPerimeter() {
-        let listItem = document.createElement('li')
+        const listItem = document.createElement('li')
         listItem.textContent = `${this.name} circumference is ${Math.round(2 * Math.PI * this.radius)}px.`
 
-        let list = document.getElementById(this.listId)
+        const list = document.getElementById(this.listId)
         list.appendChild(listItem)
     }
 }

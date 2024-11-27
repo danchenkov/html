@@ -1,0 +1,36 @@
+body.wikipedia {
+    max-width: 1070px;
+}
+
+main {
+    width: 100%;
+}
+
+section.wrn-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 181px;
+
+    background: url(https://www.worldreligionnews.com/wp-content/uploads/2024/09/wikipedia-bias.png),
+        url(https://www.worldreligionnews.com/wp-content/uploads/2024/09/religions-circle.png),
+        repeating-conic-gradient(
+            from 2deg at 5% 50%,
+            hsl(0deg 0% 99%) 14deg,
+            hsl(0deg 0% 86%) 38deg,
+            hsl(0deg 0% 99%) 50deg
+        );
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position:
+        left center,
+        right center,
+        center center;
+    background-size: contain, contain, cover;
+}
+
+section.wrn-header div {
+    width: 100%;
+    min-height: max-content;
+    text-align: center;
+}
