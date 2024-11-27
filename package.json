@@ -1,6 +1,6 @@
 {
     "name": "html",
-    "description": "HTML boilerplate",
+    "description": "HTML Boilerplate",
     "author": "Alexei Danchenkov",
     "scripts": {
         "test": "jest",
@@ -8,14 +8,14 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/danchenkov/boilerplate.git"
+        "url": "git+https://github.com/danchenkov/html.git"
     },
     "keywords": [],
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/danchenkov/boilerplate/issues"
+        "url": "https://github.com/danchenkov/html/issues"
     },
-    "homepage": "https://github.com/danchenkov/boilerplate#readme",
+    "homepage": "https://github.com/danchenkov/html#readme",
     "dependencies": {
         "color": "^4.2.3",
         "libphonenumber-js": "^1.11.15"
@@ -27,7 +27,7 @@
         "eslint-define-config": "^2.1.0",
         "globals": "^15.12.0",
         "jest": "^29.7.0",
-        "stylelint": "^16.10.0",
+        "stylelint": "^16.11.0",
         "stylelint-config-clean-order": "^6.1.0",
         "stylelint-config-standard-scss": "^13.1.0",
         "stylelint-scss": "^6.10.0"
